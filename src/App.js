@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { React, useState } from "react";
+import "./App.css";
+import AuthLandingPage from "./Modules/Authentication/AuthLandingPage";
+import Footer from "./Modules/SharedModules/Footer";
+import Header from "./Modules/SharedModules/Header";
+import LandingPage from "./Modules/Pages/LandingPage";
 
 function App() {
+  const [userAuthenticated, setUserAuthenticated] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <hr />
+      {userAuthenticated ? <AuthLandingPage /> : <LandingPage />}
+      <hr />
+      <Footer />
     </div>
   );
 }
