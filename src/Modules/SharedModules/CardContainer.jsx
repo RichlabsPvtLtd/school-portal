@@ -1,18 +1,35 @@
-import React from 'react'
+import React from 'react';
 
-export default function CardContainer() {
+const CardContainer = ({ Cards }) => {
   return (
-    <div>
-      <h1>CardContainer</h1>
-      <h2>
-        This component should take props as object with properties namely :
-        <br />
-        1. number of cards <br /> 2. icons for the cards <br />
-        3. heading(and/or description)
-        <br />{" "}
-              4. Optional (Router link i.e /settings) </h2>
-          <h3> This compnent will return a div that would loop through the numberOfCards property and the parent div would be a flexbox with only one ClassName and css rule for that div.
-          The card would be a prime component and no other css has to be done until this point. </h3>
+    <div className="hp-sub-container-2-card-container">
+      {Cards.map((item, index) => (
+        <div key={index} className={item.className}>
+          {item.src && (
+            <img
+              className="hp-container2-About-school img"
+              src={item.src}
+              alt={item.alt}
+            />
+          )}
+          <h3 className="hp-container2-About-school-font">{item.text}</h3>
+        </div>
+      ))}
+       <div className="hp-container2-About-school hp-container2-About-quick-link expanded">
+        <h3 className="hp-container2-About-school-font-quick-link">Quick Link</h3>
+        <div>
+          <p className="quick-link-list quick-link-list-1 ">Create Test</p>
+        </div>
+        <div>
+          <p  className="quick-link-list">Add Students </p>
+        </div>
+        <div>
+          <p className="quick-link-list">Add Questions </p>
+        </div>
+      </div>
     </div>
   );
-}
+};
+
+export default CardContainer;
+

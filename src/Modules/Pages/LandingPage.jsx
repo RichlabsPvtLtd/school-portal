@@ -1,10 +1,23 @@
-import React from 'react'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import SignIn from '../Authentication/SignIn';
+import SignUp from '../Authentication/SignUp';
+import AuthLandingPage from '../Authentication/AuthLandingPage';
+
 
 export default function LandingPage() {
-  return (
-    <div>
-          <h1>LandingPage</h1>
-          <h2> In this page we will intiate and handle Routing which will be connected with the side menubar as well as the cardsContainer 'Route' property( refer CardContainer.jsx )</h2>
-    </div>
-  );
-}
+ return (
+  <Router>
+  <Routes>
+    {/* Route for user sign-in */}
+    <Route path="/" element={<SignIn />} />
+
+    {/* Route for user sign-up */}
+    <Route path="/SignUp" element={<SignUp />} />
+
+      {/* Route for user AuthLandingPage */}
+    <Route path="/AuthLandingPage" element={<AuthLandingPage />} />
+  </Routes>
+</Router>
+  )
+};

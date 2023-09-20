@@ -1,38 +1,377 @@
-.App {
+/* CSS for SignIn */
+.container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: scroll;
+  background: #FFF;
+  
+}
+.container-left {
+  flex: 0.5;
+  display: flex;
+  max-height: 100vh;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  flex-direction: column;
+}
+.container-right {
+  flex: 0.5;
+  /* 100vh; */
+  max-height: 1024px;
+}
+h2 {
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #093a5e;
+}
+.si-container-left-sub-container {
+  width: 428px;
+  height: 600px;
+  position: relative;
+}
+.si-container-left-sub-container-heading {
+  margin-top: 30px;
+}
+p {
+  color: var(--grey-500, #9E9E9E);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  font: roboto;
+}
+button {
+  background: #004679;
+  color: var(--grey-10, #FFF);
+  width: 434px;
+  height: 44px;
+  border-radius: 4px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.si-container-left-sub-container-sub-heading {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.si-container-left-sub-container-input-field {
+  width: 432px;
+  height: 290px;
+  position: absolute;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+}
+.si-container-left-sub-container-security {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+.si-container-left-security-checkbox {
+  color: var(--grey-800, #212121);
+  font-size: 14px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+}
+.si-container-left-security-forgot-password {
+  color: #2e1760;
+  font-size: 14px;
+  font-weight: 500;
+}
+.si-container-left-last {
+  margin-top: 400px;
+}
+.si-container-left-last-account {
+  text-align: center;
+  color: var(--grey-500, #616161);
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+}
+.si-container-left-last-signup-link {
+  text-align: center;
+  color: #09548c;
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+/* CSS for signup */
+.su-container-left-sub-container{
+  width: 428px;
+  height: 601px;
+  margin-top: 60px;
+  position: relative;
+}
+.su-container-left-sub-container-heading {
+  margin-top: -30px;
+}
+.su-container-left-sub-container-sub-heading {
+  text-align: center;
+}
+.su-container-left-sub-container-inputfield {
+  width: 428px;
+  height: 400px;
+  position: absolute;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.su-container-left-last-container {
+  margin-top: 500px;
+}
+.su-container-left-last-account {
+  color: var(--grey-500, #616161);
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  line-height: 20px;
+}
+.su-container-left-last-signIn-link {
+  font-size: 16px;
+  font-weight: 500;
+  font-style: normal;
+  text-align: center;
+  color: #09548c;
+  line-height: 20px;
+  text-decoration-line: underline;
+}
+/* CSS for landing page */
+.hp-container {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  background: var(--grey-10, #FFF);
+ }
+.hp-container-header {
+  margin-top: 24px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border-radius: 24px;
+  height: 78px;
+  background: #FFF;
+  box-shadow: 0px 0px 16px 0px #ddbee0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 32px;
+}
+.hp-container-header-frame2 {
+  flex: 0 0 auto; 
+  margin-right: 10px;
+}
+.hp-container-header-identity {
+   flex: 1; 
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end; 
+   margin-right: 40px;
+}
+.hp-container-header-identity-image {
+  background-color: lightblue;
+  border-radius: 30px;
+  width: 57.081px; 
+  height: 46.645px;
+  border-radius: 50%;
+  margin-right: 80px;
+  margin-bottom: -50px;
+}
+h4 {
+  margin-right: -20px;
+  margin-bottom: -10px;
+  margin-top: 2px;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--Grey-900, #212121);
+}
+.hp-container-header-identity-post {
+  font-size: 14px;
+  font-weight: 500;
+  margin-right: -40px;
+  margin-bottom: 0px;
+}
+.hp-sub-container-2 {
+  max-width: 1430px;
+  height: auto;
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 20px;
+  border-radius: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(
+    309.09deg,
+    rgba(193, 197, 253, 0.7) 0.94%,
+    rgba(255, 225, 248, 0.7) 93.82%
+  );
+}
+.hp-sub-container2-school-details {
+  margin-left: 15px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.hp-sub-container2-school-heading {
+  margin-left: 20px;
+  font-size: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: 500;
+  font: Poppins;
+  color: var(--Gray-2, #4F4F4F);
+}
+.hp-sub-container2-school-name {
+  font: Poppins;
+  display: flex;
+  font-weight: 600;
+   margin-right: 20px;
+  font-size: 36px;
+  color: #000000;
+}
+.hp-sub-container2-school-id {
+  width: 179px;
+  height: 39px;
+  font: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #8d6ffc;
+  border-radius: 100px;
+  color: #ffffff;
+  margin-top: 35px;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: flex;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.hp-sub-container2-school-more-detail {
+  height: 47px;
+  color: var(--Gray-1, #333);
+  font-size: 20px;
+  font-weight: 500;
+  font: Roboto Flex;
+  margin-bottom: 10px;
+  background-color: #ffffff80;
+  border-radius: 12px;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.hp-sub-container2-school-address {
+  width: 430.5px;
+  margin-right: 15px;
+  margin-top: 10px;
+}
+.hp-sub-container2-school-phone {
+  width: 228px;
+  margin-top: 10px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.hp-container2-About-school {
+  width: 400px;
+  height: 210px;
+  background: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  flex-direction: column;
+}
+.hp-container2-About-test-center {
+  margin-top: 10px;
+}
+.hp-container2-About-student-portal {
+  margin-top: 10px;
+}
+.hp-container2-About-teachers {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.hp-container2-About-analysis {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.hp-container2-About-admission {
+  margin-top: 10px;
+}
+.hp-container2-About-quick-link {
+  background: rgba(233, 233, 254, 255);
+  margin-top: 10px;
+  flex-direction: column;
+}
+.hp-container2-About-school img {
+  width: 130px;
+  height: 130px;
+  margin-top: 5px;
+  margin-left: 0px;
+  border-radius: 290px;
+  background: rgba(233, 233, 254, 255);
+}
+.hp-container2-About-school-font {
+  font: Poppins;
+  font-weight: 400;
+  font-size: 28px;
+  color: var(--grey-800, #212121);
+  margin-top: 0px;
+  text-align: center;
+}
+.hp-container2-About-school-font-quick-link{
+  margin-top: 20px;
+  font: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  color:#4F4F4F;
+    text-align: center;
+}
+.hp-sub-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0px;
+}
+.hp-sub-container-2-card-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.hp-sub-container-2-school-more-details {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hp-sub-container2-school-container {
+  display: flex;
+  flex-wrap: wrap;
+  width:100%;
+  margin-top: -30px;
+  margin-left: 20px;
+}
+.menubar-img{
+  margin-right: 7px;
+  margin-left: -15px;
+  margin-bottom: -3px;
+}
+.quick-link-list{
+color: #6A50CC;
+font-size: 20px;
+font-weight: 600;
+line-height: 32px;
+letter-spacing: 0em;
+text-align:left;
+margin-left: -15px;
+margin-top: -10px;
+}
+.quick-link-list-1{
+  margin-top: 5px;
+  margin-left: -30px;
 }
